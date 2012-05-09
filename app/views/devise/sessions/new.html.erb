@@ -1,0 +1,16 @@
+<h1>Sign in</h1>
+
+<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal well' }) do |f| %>
+    
+    <%= f.error_notification %>
+    <%= f.input :email, :required => false, :autofocus => true %>
+    <%= f.input :password, :required => false %>
+    <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+    <%= f.error :base %>
+    
+  <div class="controls">
+    <%= f.button :submit, "Sign in", :class => "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= render "links" %>

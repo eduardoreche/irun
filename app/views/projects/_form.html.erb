@@ -1,0 +1,14 @@
+<p>
+<%= simple_form_for(@project, :html => {:class => 'form-horizontal' }) do |f| %>
+  <div class="well">
+    <%= f.error_notification %>
+    <%= f.input :name %>
+    <%= f.error :base %>
+    
+    <div class="controls">
+      <%= f.button :submit, :class => "btn btn-primary" %>
+      <%= link_to 'Cancel', projects_path, :class => 'btn' %>
+    </div>
+  </div>
+<% end %>
+</p>
