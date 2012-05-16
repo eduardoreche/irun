@@ -28,6 +28,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'paperclip'
 gem 'cancan'
+gem 'uuidtools'
 
 gem 'rspec-rails', :group => [:test, :development]
 group :test do
